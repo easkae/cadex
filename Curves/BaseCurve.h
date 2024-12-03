@@ -1,8 +1,5 @@
 #pragma once
 #include "pch.h"
-
-#ifndef BASECURVE_H
-#define BASECURVE_H
 #include "Export.h"
 
 #include <vector>
@@ -16,5 +13,3 @@ public:
 	virtual std::vector<double> Derivative(double t) = 0;
 	virtual ~BaseCurve() = default;
 };
-
-#endif

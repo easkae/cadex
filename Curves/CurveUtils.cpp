@@ -1,3 +1,4 @@
+#pragma once
 #include "pch.h"
 #include "CurveUtils.h"
 #include "CadCircle.h"

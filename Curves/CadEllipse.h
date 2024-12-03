@@ -9,12 +9,8 @@ private:
 
 public:
 	CadEllipse(double radiusX, double radiusY);
-
 	std::vector<double> Point(double t);
-
 	std::vector<double> Derivative(double t);
-
 	double GetRadiusX();
-
 	double GetRadiusY();
 };

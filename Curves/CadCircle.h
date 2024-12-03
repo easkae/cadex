@@ -9,10 +9,7 @@ private:
 
 public:
 	CadCircle(double radius);
-
 	std::vector<double> Point(double t);
-
 	std::vector<double> Derivative(double t);
-
 	double GetRadius();
 };
