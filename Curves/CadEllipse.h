@@ -1,13 +1,14 @@
 #pragma once
 #include "BaseCurve.h"
+#include "pch.h"
 
-class Ellipse : public BaseCurve
+class CURVE_API CadEllipse : public BaseCurve
 {
 private:
 	double radiusX, radiusY;
 
 public:
-	Ellipse(double radiusX, double radiusY);
+	CadEllipse(double radiusX, double radiusY);
 
 	std::vector<double> Point(double t);
 

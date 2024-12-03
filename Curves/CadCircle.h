@@ -1,20 +1,18 @@
 #pragma once
-#define _USE_MATH_DEFINES
 #include "BaseCurve.h"
+#include "pch.h"
 
-class Helix : public BaseCurve
+class CURVE_API CadCircle : public BaseCurve
 {
 private:
-	double radius, step;
+	double radius;
 
 public:
-	Helix(double radius, double step);
+	CadCircle(double radius);
 
 	std::vector<double> Point(double t);
 
 	std::vector<double> Derivative(double t);
 
 	double GetRadius();
-
-	double GetStep();
 };

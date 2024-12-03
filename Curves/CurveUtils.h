@@ -4,14 +4,14 @@
 #include <ctime>
 #include "BaseCurve.h"
 
-enum CurveType
+enum CURVE_API CurveType
 {
 	circle = 0,
 	ellipse = 1,
 	helix = 2
 };
 
-class CurveUtils
+class CURVE_API CurveUtils
 {
 public:
 	static std::shared_ptr<BaseCurve> CreateRandomCurve();

@@ -1,7 +1,8 @@
+#include "pch.h"
 #include "CurveUtils.h"
-#include "Circle.h"
-#include "Ellipse.h"
-#include "Helix.h"
+#include "CadCircle.h"
+#include "CadEllipse.h"
+#include "CadHelix.h"
 
 std::shared_ptr<BaseCurve> CurveUtils::CreateRandomCurve()
 {
@@ -16,19 +17,19 @@ std::shared_ptr<BaseCurve> CurveUtils::CreateRandomCurve()
     case CurveType::circle:
     {
         double randomRadius = 1.0 + randValue(gen);
-        return std::make_shared<Circle>(randomRadius);
+        return std::make_shared<CadCircle>(randomRadius);
     }
     case CurveType::ellipse:
     {
         double randomRadiusX = 1.0 + randValue(gen);
         double randomRadiusY = 1.0 + randValue(gen);
-        return std::make_shared<Ellipse>(randomRadiusX, randomRadiusY);
+        return std::make_shared<CadEllipse>(randomRadiusX, randomRadiusY);
     }
     case CurveType::helix:
     {
         double randomStep = 1.0 + randValue(gen);
         double randomRadius = 1.0 + randValue(gen);
-        return std::make_shared<Helix>(randomStep, randomRadius);
+        return std::make_shared<CadHelix>(randomStep, randomRadius);
     }
     }
     return nullptr;
